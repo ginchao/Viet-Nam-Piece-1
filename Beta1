@@ -533,7 +533,10 @@ local btns = serv:Channel("Mics")
       Lighting.Outlines = true  
   end  
   end) 
- btns:Label("Script") 
+ btns:Label("Script")
+btns:Button("Lucky Block Battleground", function() 
+ loadstring(game:HttpGet('https://raw.githubusercontent.com/ginchao/LuckyBlockBattleground/main/HttVeg'))() 
+ end)
   btns:Button("Tele Tool", function()   
    mouse = game.Players.LocalPlayer:GetMouse()   
    tool = Instance.new("Tool")   
