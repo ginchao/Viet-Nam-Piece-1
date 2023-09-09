@@ -1,0 +1,552 @@
+local DiscordLib = loadstring(game:HttpGet('https://raw.githubusercontent.com/ginchao/Discord-Lib/main/Discord-Lib'))() 
+ local win = DiscordLib:Window("Test Hub") 
+ local serv = win:Server("VietNam Piece Beta First Sea", "") 
+ local drops = serv:Channel("Mob") 
+ drops:Toggle("Auto Bring NickBeo",false, function(v) 
+ getgenv().autobring = v 
+ spawn(function() 
+ while autobring == true do 
+ game:GetService("Workspace")["NPC DAMAGE"].NickBeo.HumanoidRootPart.CFrame = game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame * CFrame.new(0, 0, -5) 
+ wait() 
+ end 
+ end) 
+ end) 
+ drops:Toggle("Auto Quest NickBeo",false, function(v) 
+ for_ = 1,4 do 
+ getgenv().AutoQuest = v 
+ spawn(function() 
+ while AutoQuest==true do wait() 
+ pcall(function() 
+ game:GetService("Workspace")["NickBeo Island"]["Quest NickBeo"].Quest.QuestTake.QuestTake.Accept1.RemoteEvent:FireServer() 
+ end) 
+ end 
+ end) 
+ end 
+ end) 
+ drops:Seperator() 
+ drops:Toggle("Auto Bring Tango",false, function(v) 
+         getgenv().autobring = v 
+ spawn(function() 
+         while autobring == true do 
+                 game:GetService("Workspace")["NPC DAMAGE"].Tango.HumanoidRootPart.CFrame 
+                         = game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame * CFrame.new(0, 0, -5) 
+                 wait() 
+         end 
+ end) 
+ end) 
+ drops:Toggle("Auto Quest Tango",false, function(v) 
+ for_ = 1,4 do 
+ getgenv().AutoQuest = v 
+ spawn(function() 
+ while AutoQuest==true do wait() 
+ pcall(function() 
+ game:GetService("Workspace")["NickBeo Island"]["Quest Tango"].Quest.QuestTake.QuestTake.Accept1.RemoteEvent:FireServer() 
+ wait() 
+ end) 
+ end 
+ end) 
+ end 
+ end) 
+  
+ drops:Seperator() 
+ drops:Toggle("Auto Bring Kaido",false, function(v) 
+         getgenv().autobring = v 
+ spawn(function() 
+         while autobring == true do 
+                 game:GetService("Workspace")["NPC DAMAGE"].Kaidou.HumanoidRootPart.CFrame 
+                         = game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame * CFrame.new(0, 0, -6) 
+  
+                 wait() 
+         end 
+ end) 
+ end) 
+ drops:Toggle("Auto Quest Kaido",false, function(v) 
+ for_ = 1,5 do 
+ getgenv().autoquest = v 
+ spawn(function() 
+ while autoquest do wait() 
+ pcall(function() 
+ game.Workspace["KAIDO ISLANDDDDDDDD"]["KAIDOUU QUESTTT"].ClickPart.QuestTake.QuestTake.Accept1.RemoteEvent:FireServer() wait() 
+ end) 
+ end 
+ end) 
+ end 
+ end) 
+  
+ drops:Label("Auto Quest Đã Được Tối Ưu") 
+ local drops = serv:Channel("Weapon") 
+ local Weaponlist = {} 
+ local Weapon = nil 
+ for i, v in pairs(game:GetService("Players").LocalPlayer.Backpack:GetChildren()) do 
+ if v:IsA("Tool") then 
+         table.insert(Weaponlist,v.Name) 
+ end 
+ end 
+ local drop = drops:Dropdown("Pick", Weaponlist, function(m) 
+ for i, k in pairs(game.Players.LocalPlayer.Backpack:GetChildren()) do 
+ if m == k.Name then 
+         Weapon = m 
+ if Weapon then 
+ game.Players.LocalPlayer.Character.Humanoid:EquipTool(game:GetService("Players").LocalPlayer.Backpack:FindFirstChild(Weapon)) 
+ end 
+ end 
+ end 
+ end) 
+ drops:Button("Refresh Weapon", function() 
+ drop:Clear() 
+ for i, v in pairs(game.Players.LocalPlayer.Backpack:GetChildren()) do 
+ if v:IsA("Tool") then 
+ drop:Add(v.Name) 
+ end 
+ end 
+ end) 
+ drops:Toggle("Auto Equip",false, function(a) 
+         AutoEquiped = a 
+ end) 
+ spawn(function() 
+         while wait() do 
+                 if AutoEquiped then 
+                         pcall(function() 
+                                 game.Players.LocalPlayer.Character.Humanoid:EquipTool(game:GetService("Players").LocalPlayer.Backpack:FindFirstChild(Weapon)) 
+                         end) 
+                 end 
+         end 
+ end) 
+ drops:Toggle("Choose Weapon To x5 Fast Actack",false, function(v) 
+ for _ = 1,5 do 
+ getgenv().e = v 
+ spawn(function() 
+ while e == true do 
+ pcall(function() 
+ while e do wait() 
+ pcall(function()        game:GetService("Players").LocalPlayer.Character[Weapon].Hitbox:FireServer(1, 0) 
+ wait(0.11) 
+ end) 
+ end 
+ end) 
+ end 
+ end) 
+ end 
+ end) 
+ drops:Toggle("Choose Weapon To x10 Fast Actack",false, function(v) 
+ for _ = 1,10 do 
+ getgenv().e = v 
+ spawn(function() 
+ while e == true do 
+ pcall(function() 
+ while e do wait() 
+ pcall(function()        game:GetService("Players").LocalPlayer.Character[Weapon].Hitbox:FireServer(1, 0) 
+ wait(0.1) 
+ end) 
+ end 
+ end) 
+ end 
+ end) 
+ end 
+ end) 
+ drops:Toggle("Choose Weapon To X20 Actack",false, function(v) 
+ for _ = 1,20 do 
+ getgenv().e = v 
+ spawn(function() 
+ while e == true do 
+ pcall(function() 
+ while e do wait() 
+ spawn(function()        game:GetService("Players").LocalPlayer.Character[Weapon].Hitbox:FireServer(1, 0) 
+ wait(0.1) 
+ end) 
+ end 
+ end) 
+ end 
+ end) 
+ end 
+ end) 
+ drops:Toggle("Grab Any Tool Drop",false, function(l) 
+ getgenv().grabtools = l 
+ spawn(function() 
+ while grabtools do wait() 
+ pcall(function() 
+ while grabtools do wait() 
+ spawn(function() 
+ for i, m in pairs(game.Workspace:GetChildren()) do 
+ if m.ClassName == "Tool" and m:FindFirstChild("Handle") then 
+ firetouchinterest(game.Players.LocalPlayer.Character.HumanoidRootPart, m.Handle, 1) wait() 
+ if grabtools == false then break; end 
+ end 
+ end 
+ end) 
+ end 
+ end) 
+ end 
+ end) 
+ end) 
+ local drops = serv:Channel("Player") 
+ local plrlist = {} 
+ local plr = nil 
+ for i, v in pairs(game:GetService("Players"):GetChildren()) do 
+ table.insert(plrlist,v.Name) 
+ end 
+ local drop = drops:Dropdown("Choose Player", plrlist, function(m) 
+ for i, b in pairs(game:GetService("Workspace"):GetChildren()) do 
+ if m == b.name then 
+ plr = m 
+ end 
+ end 
+ end) 
+ drops:Button("Refresh Player", function() 
+ drop:Clear() 
+ for i, v in pairs(game.Players:GetChildren()) do 
+ if v:IsA("Player") then 
+ drop:Add(v.Name) 
+ end 
+ end 
+ end) 
+ drops:Button("Teleport To Player", function() 
+ game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = game.Workspace[plr].HumanoidRootPart.CFrame 
+ end) 
+ drops:Button("Choose Player To Super Ultra Skill", function() 
+ game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = game.Workspace[plr].HumanoidRootPart.CFrame 
+ wait(0.1) 
+ for i,v in pairs(game:GetDescendants()) do 
+ if v:IsA("RemoteEvent") and v.Name == "Fire" then 
+ v:FireServer() 
+ end 
+ end 
+ end) 
+ drops:Toggle("Auto Teleport Player",false, function(t) 
+ getgenv().autotele = t 
+ spawn(function() 
+ while autotele do wait() 
+ pcall(function() 
+ game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = game.Workspace[plr].HumanoidRootPart.CFrame * CFrame.new(0, 0, 6) wait() 
+ end) 
+ end 
+ end) 
+ end) 
+ drops:Toggle("Auto Bring Player",false, function(a) 
+ getgenv().AutoBr = a 
+ spawn(function() 
+ while AutoBr do wait() 
+ pcall(function() 
+ while AutoBr==true do wait() 
+ spawn(function() 
+  game.Workspace[plr].HumanoidRootPart.CFrame =  
+ game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame * CFrame.new(0, 0, -5) wait() 
+ end) 
+ end 
+ end) 
+ end 
+ end) 
+ end) 
+ drops:Toggle("Auto Tween Bring Player",false, function(p) 
+ getgenv().autobri = p 
+ spawn(function() 
+ while autobri do wait() 
+ pcall(function() 
+ while autobri do wait() 
+ local ok = CFrame.new(game.Players.LocalPlayer.Character.HumanoidRootPart.Position) 
+ local tween = game.TweenService:Create(game.Workspace[plr].HumanoidRootPart, TweenInfo.new(), {CFrame = ok * CFrame.new(0, 5, 0)})  
+ tween:Play() wait() 
+ end 
+ end) 
+ end 
+ end) 
+ end) 
+ drops:Toggle("Auto Bring All Player",false, function(t) 
+ getgenv().autobr = t 
+ spawn(function() 
+ while autobr do wait() 
+ pcall(function() 
+ while autobr do wait() 
+ for i, v in pairs(game.Workspace:GetChildren()) do 
+ if v:FindFirstChild("HumanoidRootPart") then  
+ v.HumanoidRootPart.CFrame = game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame wait() 
+ if autobr == false then break end 
+ end 
+ end 
+ end 
+ end) 
+ end 
+ end) 
+ end) 
+ drops:Label("Need Player In Your Sever") 
+ drops:Toggle("Super Ultra DAMGE Attack",false, function(v) 
+ getgenv().auto = v 
+ spawn(function() 
+ while auto do wait() 
+ spawn(function() 
+ for i, c in pairs(game.Players:GetChildren()) do 
+ if c.ClassName == "Player" then 
+ for i, f in pairs(c:GetChildren()) do 
+ if f:IsA("Backpack") then 
+ for i, a in pairs(f:GetDescendants()) do 
+ if a:IsA("RemoteEvent") and a.Name == "Hitbox" then 
+ a:FireServer(1, 0) 
+ end 
+ end 
+ end 
+ end 
+ end 
+ end 
+ end) 
+ end 
+ end) 
+ end) 
+ drops:Toggle("Auto Armor",false, function(o) 
+ getgenv().autobuffhp = o 
+ while autobuffhp do wait() 
+ for i, v in pairs(game.Players:GetDescendants()) do 
+ if v:IsA("RemoteEvent") and v.Name == "Fire" and v:FindFirstChild("Armor") then 
+ v:FireServer() 
+ if autobuffhp == false then break; end 
+ end 
+ end 
+ end 
+ end) 
+ drops:Button("Super Ultra Skill", function() 
+ for i,v in pairs(game:GetDescendants()) do 
+ if v:IsA("RemoteEvent") and v.Name == "Fire" then 
+ v:FireServer() 
+ end 
+ end 
+ end) 
+ drops:Button("Super Ultra Inf Legendary Skill Attack", function()  
+ for i, v in pairs(game:GetDescendants()) do 
+ if v:IsA("RemoteEvent") and v.Name ~= "Eat" then 
+ v:FireServer() 
+ end 
+ end 
+ for i, v in pairs(game:GetDescendants()) do 
+ if v:IsA("RemoteEvent") and v.Name == "Fire" then 
+ v:FireServer() 
+ end 
+ end 
+ end) 
+  local sldrs = serv:Channel("Walk Speed")   
+  sldrs:Button("Clear", function(v)   
+   game.Players.LocalPlayer.Character.Humanoid.HipHeight = 2   
+   game.Players.LocalPlayer.Character.Humanoid.WalkSpeed = 16   
+   game.Players.LocalPlayer.Character.Humanoid.JumpPower = 50   
+   end)   
+   local sldr = sldrs:Slider("Speeds", 0, 1000, 400, function(v)   
+  
+   game.Players.LocalPlayer.Character.Humanoid.WalkSpeed = v   
+   end)   
+   sldrs:Button("Speed 1000", function()   
+   sldr:Change(1000)   
+   end)   
+   sldrs:Button("Speed 500", function()   
+   sldr:Change(500)   
+   end)   
+   sldrs:Button("Speed 300", function()   
+   sldr:Change(300)   
+   end)   
+   sldrs:Button("Speed 100", function()   
+   sldr:Change(100)   
+   end)   
+   sldrs:Button("Speed 50", function()   
+   sldr:Change(50)   
+   end)   
+   sldrs:Button("Speed 30", function()   
+   sldr:Change(30)   
+   end)   
+   local sldr = sldrs:Slider("Jumps", 0, 1000, 400, function(v)   
+  
+   game.Players.LocalPlayer.Character.Humanoid.JumpPower = v   
+   end)   
+   sldrs:Button("Jump 1000", function()   
+   sldr:Change(1000)   
+   end)   
+   sldrs:Button("Jump 500", function()   
+   sldr:Change(500)   
+   end)   
+   sldrs:Button("Jump 300", function()   
+   sldr:Change(300)   
+   end)   
+   sldrs:Button("Jump 100", function()   
+   sldr:Change(100)   
+   end)   
+   sldrs:Button("Jump 70", function()   
+   sldr:Change(70)   
+   end)   
+   local sldr = sldrs:Slider("height", 0, 200, 200, function(v)   
+   game.Players.LocalPlayer.Character.Humanoid.HipHeight = v   
+   end)   
+   sldrs:Button("height 100", function()   
+   sldr:Change(100)   
+   end)   
+   sldrs:Button("height 50", function()   
+   sldr:Change(50)   
+   end)   
+   sldrs:Button("height 30", function()   
+   sldr:Change(30)   
+   end)   
+   sldrs:Button("height 10", function()   
+   sldr:Change(10)   
+   end)  
+ local btns = serv:Channel("Island") 
+  
+ btns:Button("Kaido Island [2000]", function() 
+         local rootPart = game.Players.LocalPlayer.Character.HumanoidRootPart 
+         rootPart.CFrame = CFrame.new(-708.903564, 87687.7266, 809.050476, 0.312079072, -9.11389222e-08, 0.950056136, -5.59602764e-09, 1, 9.77682433e-08, -0.950056136, -3.58279628e-08, 0.312079072) 
+ end) 
+ btns:Button("Nickbeo Island [7000+]", function() 
+         local rootPart = game.Players.LocalPlayer.Character.HumanoidRootPart 
+         rootPart.CFrame = CFrame.new(-1622.85156, 87698.5469, 622.421936, -0.0521310531, -0, -0.998640239, -0, 1, -0, 0.998640239, 0, -0.0521310531) 
+ end) 
+ btns:Button("Marine Island [3000-7000]", function() 
+         local rootPart = game.Players.LocalPlayer.Character.HumanoidRootPart 
+         rootPart.CFrame = CFrame.new(-152.420593, 87740.3125, -2115.33057, -0.995318413, 0, 0.0966506973, 0, 1, -0, -0.0966507122, 0, -0.995318294) 
+ end) 
+ btns:Button("Platinum Town [2000-3000]", function() 
+         local rootPart = game.Players.LocalPlayer.Character.HumanoidRootPart 
+         rootPart.CFrame = CFrame.new(-1280.56299, 87693.3281, 3242.69702, -0.0239899773, -0, -0.999712229, -0, 1, -0, 0.999712229, 0, -0.0239899773) 
+ end) 
+ btns:Toggle("AutoClickGodBox",false, function(e) 
+         getgenv().AutoClickGodBox = e 
+         while AutoClickGodBox == true do wait() 
+                 fireclickdetector(game:GetService("Workspace")["Platinum Town [ 2000 - 3000 ]"].PlatinumMAP.GodBox.ClickDetector) 
+         end 
+ end) 
+ btns:Label("More") 
+ btns:Button("WallSky", function() 
+  
+  Local = game:GetService('Players').LocalPlayer  
+  Char  = Local.Character  
+  touched,tpdback = false, false  
+  Local.CharacterAdded:connect(function(char)  
+      if script.Disabled ~= true then  
+          wait(.25)  
+          loc = Char.HumanoidRootPart.Position  
+          Char:MoveTo(box.Position + Vector3.new(0,.5,0))  
+      end  
+  end)  
+  game:GetService('UserInputService').InputBegan:connect(function(key)  
+      if key.KeyCode == Enum.KeyCode.Equals then  
+          if script.Disabled ~= true then  
+              script.Disabled = true  
+              print'you may re-execute'  
+          end  
+      end  
+  end)  
+  box = Instance.new('Part',workspace)  
+  box.Anchored = true  
+  box.CanCollide = true  
+  box.Size = Vector3.new(10000,3,10000)  
+  box.Position = Vector3.new(0,10000,0)  
+  box.Touched:connect(function(part)  
+      if (part.Parent.Name == Local.Name) then  
+          if touched == false then  
+              touched = true  
+              function apply()  
+                  if script.Disabled ~= true then  
+                      no = Char.HumanoidRootPart:Clone()  
+                      wait(.25)  
+                      Char.HumanoidRootPart:Destroy()  
+                      no.Parent = Char  
+                      Char:MoveTo(loc)  
+                      touched = false  
+                  end end  
+              if Char then  
+                  apply()  
+              end  
+          end  
+      end  
+  end)  
+  repeat wait() until Char  
+  loc = Char.HumanoidRootPart.Position  
+  Char:MoveTo(box.Position + Vector3.new(0,.5,0))  
+  end)  
+  btns:Button("Fast Mode", function()  
+  local ToDisable = {  
+          Textures = true,  
+          VisualEffects = true,  
+          Parts = true,  
+          Particles = true,  
+          Sky = true  
+  }  
+  
+  local ToEnable = {  
+          FullBright = false  
+  }  
+  
+  local Stuff = {}  
+  
+  for _, v in next, game:GetDescendants() do  
+          if ToDisable.Parts then  
+                  if v:IsA("Part") or v:IsA("Union") or v:IsA("BasePart") then  
+                          v.Material = Enum.Material.SmoothPlastic  
+                          table.insert(Stuff, 1, v)  
+                  end  
+          end  
+  
+          if ToDisable.Particles then  
+                  if v:IsA("ParticleEmitter") or v:IsA("Smoke") or v:IsA("Explosion") or v:IsA("Sparkles") or v:IsA("Fire") then  
+                          v.Enabled = false  
+                          table.insert(Stuff, 1, v)  
+                  end  
+          end  
+  
+          if ToDisable.VisualEffects then  
+                  if v:IsA("BloomEffect") or v:IsA("BlurEffect") or v:IsA("DepthOfFieldEffect") or v:IsA("SunRaysEffect") then  
+                          v.Enabled = false  
+                          table.insert(Stuff, 1, v)  
+                  end  
+          end  
+  
+          if ToDisable.Textures then  
+                  if v:IsA("Decal") or v:IsA("Texture") then  
+                          v.Texture = ""  
+                          table.insert(Stuff, 1, v)  
+                  end  
+          end  
+  
+          if ToDisable.Sky then  
+                  if v:IsA("Sky") then  
+                          v.Parent = nil  
+                          table.insert(Stuff, 1, v)  
+                  end  
+          end  
+  end  
+  
+  game:GetService("TestService"):Message("Effects Disabler Script : Successfully disabled "..#Stuff.." assets / effects. Settings :")  
+  
+  for i, v in next, ToDisable do  
+          print(tostring(i)..": "..tostring(v))  
+  end  
+  
+  if ToEnable.FullBright then  
+      local Lighting = game:GetService("Lighting")  
+  
+      Lighting.FogColor = Color3.fromRGB(255, 255, 255)  
+      Lighting.FogEnd = math.huge  
+      Lighting.FogStart = math.huge  
+      Lighting.Ambient = Color3.fromRGB(255, 255, 255)  
+      Lighting.Brightness = 5  
+      Lighting.ColorShift_Bottom = Color3.fromRGB(255, 255, 255)  
+      Lighting.ColorShift_Top = Color3.fromRGB(255, 255, 255)  
+      Lighting.OutdoorAmbient = Color3.fromRGB(255, 255, 255)  
+      Lighting.Outlines = true  
+  end  
+  end) 
+ btns:Label("Script") 
+  btns:Button("Tele Tool", function()   
+   mouse = game.Players.LocalPlayer:GetMouse()   
+   tool = Instance.new("Tool")   
+   tool.RequiresHandle = false   
+   tool.Name = "Tele Tool"   
+   tool.Activated:connect(function()   
+   local pos = mouse.Hit+Vector3.new(0,2.5,0)   
+   pos = CFrame.new(pos.X,pos.Y,pos.Z)   
+   game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = pos   
+   end)   
+   tool.Parent = game.Players.LocalPlayer.Backpack   
+   end)  
+ btns:Button("Anti Afk", function()  
+  loadstring(game:HttpGet("https://raw.githubusercontent.com/ginchao/Anti-AFK/main/NO%20KICK" ,true))()  
+  end)  
+  btns:Button("Keyboard", function()  loadstring(game:HttpGet("https://raw.githubusercontent.com/advxzivhsjjdhxhsidifvsh/mobkeyboard/main/main.txt", true))()     
+ end)           
+  btns:Button("FlyV3", function()  loadstring(game:HttpGet("https://raw.githubusercontent.com/XNEOFF/FlyGuiV3/main/FlyGuiV3.txt"))() 
+ end)  
+  btns:Button("Shift Lock", function()         loadstring(game:HttpGet("https://raw.githubusercontent.com/MiniNoobie/ShiftLockx/main/Shiftlock-MiniNoobie",true))()  
+  end)
