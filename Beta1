@@ -108,11 +108,7 @@ drops:Toggle("Choose Weapon To Fast Actack",false, function(v)
  spawn(function() 
  for i, m in pairs(game.Workspace:GetChildren()) do 
  if m.ClassName == "Tool" and m:FindFirstChild("Handle") then  firetouchinterest(game.Players.LocalPlayer.Character.HumanoidRootPart, m.Handle, 1) wait() 
-for i, v in pairs(game:GetService("Workspace"):GetChildren()) do
-if v:FindFirstChild("ClickDetector") then
-fireclickdetector(v.ClickDetector)
-end
-end if grabtools == false then break; end 
+if grabtools == false then break; end 
 end 
  end 
  end) 
@@ -120,6 +116,16 @@ end
  end) 
  end 
  end)
+spawn(function()
+while wait() do
+if not getgenv().grabtools then break end
+for i, v in pairs(game:GetService("Workspace"):GetChildren()) do
+if v:FindFirstChild("ClickDetector") then
+fireclickdetector(v.ClickDetector) wait()
+end
+end
+end
+end)
  end) 
  local drops = serv:Channel("Player") 
  local plrlist = {} 
