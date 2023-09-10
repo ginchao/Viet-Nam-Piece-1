@@ -1,6 +1,6 @@
 local DiscordLib = loadstring(game:HttpGet('https://raw.githubusercontent.com/ginchao/Discord-Lib/main/Discord-Lib'))() 
  local win = DiscordLib:Window("Test Hub") 
- local serv = win:Server("VietNam Piece Beta First Sea", "") 
+ local serv = win:Server("VietNamPiece Pvp First Sea", "") 
  local drops = serv:Channel("Mob") 
  drops:Toggle("Auto Bring NickBeo",false, function(v) 
  getgenv().autobring = v 
