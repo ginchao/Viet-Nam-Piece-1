@@ -95,16 +95,19 @@ local DiscordLib = loadstring(game:HttpGet('https://raw.githubusercontent.com/gi
  while grabtools do wait() 
  spawn(function() 
  for i, m in pairs(game.Workspace:GetChildren()) do 
- if m.ClassName == "Tool" and m:FindFirstChild("Handle") then 
- firetouchinterest(game.Players.LocalPlayer.Character.HumanoidRootPart, m.Handle, 1) wait() 
- if grabtools == false then break; end 
- end 
+ if m.ClassName == "Tool" and m:FindFirstChild("Handle") then  firetouchinterest(game.Players.LocalPlayer.Character.HumanoidRootPart, m.Handle, 1) wait() 
+for i, v in pairs(game:GetService("Workspace"):GetChildren()) do
+if v:FindFirstChild("ClickDetector") then
+fireclickdetector(v.ClickDetector)
+end
+end if grabtools == false then break; end 
+end 
  end 
  end) 
  end 
  end) 
  end 
- end) 
+ end)
  end) 
  local drops = serv:Channel("Player") 
  local plrlist = {} 
