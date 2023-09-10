@@ -200,10 +200,11 @@ end
  end) 
  drops:Label("Need Player In Your Sever") 
  drops:Toggle("Super Ultra DAMGE Attack",false, function(v) 
- getgenv().auto = v 
+ getgenv().autop = v;
  spawn(function() 
- while auto do wait() 
+ while auto do wait()
  spawn(function() 
+if not gengenv().autop then break end
  for i, c in pairs(game.Players:GetChildren()) do 
  if c.ClassName == "Player" then 
  for i, f in pairs(c:GetChildren()) do 
@@ -211,7 +212,6 @@ end
  for i, a in pairs(f:GetDescendants()) do 
  if a:IsA("RemoteEvent") and a.Name == "Hitbox" then 
  a:FireServer(8, 5) 
-if auto == false then break end
  end 
  end 
  end 
