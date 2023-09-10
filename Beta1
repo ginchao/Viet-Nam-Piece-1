@@ -412,7 +412,6 @@ pcall(function()
 fireclickdetector(game:GetService("Workspace")["STARTER ISLAND [ Lv 1+ ]"].Shop[" "].RANDOM) wait()
 end)
 end
-end
 end)
 end
 end)
@@ -425,7 +424,6 @@ while auto do wait()
 pcall(function()
 fireclickdetector(game:GetService("Workspace")["STARTER ISLAND [ Lv 1+ ]"]["Secret Random"].RANDOM) wait()
 end)
-end
 end
 end)
 end
