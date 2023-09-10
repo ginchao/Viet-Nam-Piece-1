@@ -402,6 +402,34 @@ end)
 end
 end
 end)
+btns:Toggle("Auto Buy Fruit Normal", 
+false, function(v)
+for_ = 1,3 do
+getgenv().auto = v
+spawn(function()
+while auto do wait()
+pcall(function()
+fireclickdetector(game:GetService("Workspace")["STARTER ISLAND [ Lv 1+ ]"].Shop[" "].RANDOM) wait()
+end)
+end
+end
+end)
+end
+end)
+btns:Toggle("Auto Random Secret Fruit", 
+false, function(v)
+for_ = 1,3 do
+getgenv().auto = v
+spawn(function()
+while auto do wait()
+pcall(function()
+fireclickdetector(game:GetService("Workspace")["STARTER ISLAND [ Lv 1+ ]"]["Secret Random"].RANDOM) wait()
+end)
+end
+end
+end)
+end
+end)
  btns:Button("Safe Zone", function()
 game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(394.431854, 70.4349213, -582.768921, -0.125474453, 0, -0.992096961, 0, 1, 0, 0.992096841, 0, -0.125474468)*CFrame.new(0, 7, 0)
 end)
