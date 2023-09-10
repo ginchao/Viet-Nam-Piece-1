@@ -203,7 +203,7 @@ end
  getgenv().autop = v;
  spawn(function() 
  while autop do wait()
-if not gengenv().autop then break end
+if not getgenv().autop then break end
  for i, c in pairs(game.Players:GetChildren()) do 
  if c.ClassName == "Player" then 
  for i, f in pairs(c:GetChildren()) do 
@@ -211,6 +211,7 @@ if not gengenv().autop then break end
  for i, a in pairs(f:GetDescendants()) do 
  if a:IsA("RemoteEvent") and a.Name == "Hitbox" then 
  a:FireServer(8, 5) 
+break;
  end 
  end 
  end 
