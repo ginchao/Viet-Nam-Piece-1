@@ -46,7 +46,7 @@ local DiscordLib = loadstring(game:HttpGet('https://raw.githubusercontent.com/gi
  while e == true do 
  pcall(function() 
  while e do wait() 
- pcall(function()        game:GetService("Players").LocalPlayer.Character[Weapon].Hitbox:FireServer(1, 0) 
+ pcall(function()        game:GetService("Players").LocalPlayer.Character[Weapon].Hitbox:FireServer(8, 4) 
  wait(0.11) 
  end) 
  end 
@@ -62,7 +62,7 @@ local DiscordLib = loadstring(game:HttpGet('https://raw.githubusercontent.com/gi
  while e == true do 
  pcall(function() 
  while e do wait() 
- pcall(function()        game:GetService("Players").LocalPlayer.Character[Weapon].Hitbox:FireServer(1, 0) 
+ pcall(function()        game:GetService("Players").LocalPlayer.Character[Weapon].Hitbox:FireServer(8, 3) 
  wait(0.1) 
  end) 
  end 
@@ -78,7 +78,7 @@ local DiscordLib = loadstring(game:HttpGet('https://raw.githubusercontent.com/gi
  while e == true do 
  pcall(function() 
  while e do wait() 
- spawn(function()        game:GetService("Players").LocalPlayer.Character[Weapon].Hitbox:FireServer(1, 0) 
+ spawn(function()        game:GetService("Players").LocalPlayer.Character[Weapon].Hitbox:FireServer(8, 3) 
  wait(0.1) 
  end) 
  end 
@@ -207,7 +207,8 @@ local DiscordLib = loadstring(game:HttpGet('https://raw.githubusercontent.com/gi
  if f:IsA("Backpack") then 
  for i, a in pairs(f:GetDescendants()) do 
  if a:IsA("RemoteEvent") and a.Name == "Hitbox" then 
- a:FireServer(1, 0) 
+ a:FireServer(8, 5) 
+if auto == false then break end
  end 
  end 
  end 
