@@ -12,15 +12,14 @@ end)
 tgls:Toggle("Auto Fruit",false, function(v)
 getgenv().autostats = v
 while autostats==true do wait()
-game:GetService("ReplicatedStorage"):FindFirstChild("StatSystem"):WaitForChild("Points"):FireServer("Devil Fruit")
+game:GetService("ReplicatedStorage"):FindFirstChild("StatSystem"):WaitForChild("Points"):FireServer("DevilFruit")
 wait()
 end
 end)
 tgls:Toggle("Auto Health",false, function(v)
 getgenv().autostats = v
 while autostats==true do wait()
-game:GetService("ReplicatedStorage"):FindFirstChild("StatSystem"):WaitForChild("Points"):FireServer("S
-Health")
+game:GetService("ReplicatedStorage"):FindFirstChild("StatSystem"):WaitForChild("Points"):FireServer("MaxHealth")
 wait()
 end
 end)
