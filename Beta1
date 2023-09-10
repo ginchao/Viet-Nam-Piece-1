@@ -202,8 +202,7 @@ end
  drops:Toggle("Super Ultra DAMGE Attack",false, function(v) 
  getgenv().autop = v;
  spawn(function() 
- while auto do wait()
- spawn(function() 
+ while autop do wait()
 if not gengenv().autop then break end
  for i, c in pairs(game.Players:GetChildren()) do 
  if c.ClassName == "Player" then 
