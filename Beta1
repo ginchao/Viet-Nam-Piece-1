@@ -30,6 +30,7 @@ game:GetService("ReplicatedStorage"):FindFirstChild("StatSystem"):WaitForChild("
 wait()
 end
 end)
+tgls:Label("Buy")
 tgls:Toggle("Auto Buy Yoruv3",false, function(v)
 for _ = 1,3 do
 getgenv().autoyoruv3 = v
