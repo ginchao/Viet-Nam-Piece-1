@@ -2,29 +2,29 @@ local DiscordLib = loadstring(game:HttpGet('https://raw.githubusercontent.com/gi
  local win = DiscordLib:Window("Test Hub") 
  local serv = win:Server("VietNamPiece Pvp 1", "")
 local tgls = serv:Channel("Stats")
-tgls:Toggle("Auto Sword",false, function(v)
-getgenv().autostats = v
-while autostats==true do wait()
+tgls:Toggle("Auto Sword",false, function(z)
+getgenv().autostats = z
+while autostats do wait()
 game:GetService("ReplicatedStorage"):FindFirstChild("StatSystem"):WaitForChild("Points"):FireServer("Sword")
 wait()
 end
 end)
-tgls:Toggle("Auto Fruit",false, function(v)
-getgenv().autostats = v
-while autostats==true do wait()
+tgls:Toggle("Auto Fruit",false, function(z)
+getgenv().autostats = z
+while autostats do wait()
 game:GetService("ReplicatedStorage"):FindFirstChild("StatSystem"):WaitForChild("Points"):FireServer("DevilFruit")
 wait()
 end
 end)
-tgls:Toggle("Auto Health",false, function(v)
-getgenv().autostats = v
-while autostats==true do wait()
+tgls:Toggle("Auto Health",false, function(z)
+getgenv().autostats = z
+while autostats do wait()
 game:GetService("ReplicatedStorage"):FindFirstChild("StatSystem"):WaitForChild("Points"):FireServer("MaxHealth")
 wait()
 end
 end)
-tgls:Toggle("Auto Melee",false, function(v)
-getgenv().autostats = v
+tgls:Toggle("Auto Melee",false, function(z)
+getgenv().autostats = z
 while autostats==true do wait()
 game:GetService("ReplicatedStorage"):FindFirstChild("StatSystem"):WaitForChild("Points"):FireServer("Melee")
 wait()
