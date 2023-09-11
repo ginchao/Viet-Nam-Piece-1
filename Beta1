@@ -273,21 +273,19 @@ end)
  end) 
  end) 
  drops:Toggle("Auto Bring All Player",false, function(t) 
- getgenv().autobr = t 
- spawn(function() 
- while autobr do wait() 
- pcall(function() 
- while autobr do wait() 
- for i, v in pairs(game.Workspace:GetChildren()) do 
- if v:FindFirstChild("HumanoidRootPart") then  
- v.HumanoidRootPart.CFrame = game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame wait() 
- if autobr == false then break end 
- end 
- end 
- end 
- end) 
- end 
- end) 
+ getgenv().autobring1 = t
+spawn(function()
+while getgenv().autobring1 do wait()
+spawn(function()
+for i, v in pairs(game.Players:GetChildren()) do
+local ok = game.Players.LocalPlayer.Name
+if v.Name ~=  ok  then 
+v.Character.HumanoidRootPart.CFrame  = game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame * CFrame.new(0, 0, -7) wait()
+end
+end
+end)
+end
+end)
  end) 
  drops:Label("Need Player In Your Sever") 
  drops:Toggle("Super Ultra DAMGE Attack",false, function(v) 
