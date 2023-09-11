@@ -398,6 +398,9 @@ local sizeArg = t
 end
 end
 end)
+drops:Button("Hitbox 1", function()
+sldr:Change(1)
+end)
 drops:Button("Hitbox 80", function()
 sldr:Change(80)
 end)
