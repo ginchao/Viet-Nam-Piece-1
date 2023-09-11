@@ -381,7 +381,7 @@ drops:Toggle("Super Ultra DAMGE Attack",false, function(v)
   end  
   end)  
   end) 
-local sldr = drops:Slider("Player Hitbox", 0, 1000, 0, function(t)
+local sldr = drops:Slider("Player Hitbox", 0, 2500, 0, function(t)
 local plr1 = game.Players.LocalPlayer
 if game.Players ~= plr1 and game.Players[plr].Character:FindFirstChild("HumanoidRootPart") then
 local sizeArg = t
