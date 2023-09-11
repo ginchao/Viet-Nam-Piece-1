@@ -424,7 +424,7 @@ local plr = game.Players.LocalPlayer
 Players = game:GetService("Players")
 	for i, v in pairs(Players:GetPlayers()) do
 if v ~= plr and v.Character:FindFirstChild("HumanoidRootPart") then
-local sizeArg = 100
+local sizeArg = 2500
 			local Size = Vector3.new(sizeArg,sizeArg,sizeArg)
 			local Root = v.Character:FindFirstChild("HumanoidRootPart")
 			if Root:IsA("BasePart") then
