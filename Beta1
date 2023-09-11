@@ -339,7 +339,81 @@ break;
  v:FireServer() 
  end 
  end 
- end) 
+ end)
+local drops = serv:Channel("Player2")
+local plrlist = {}
+local plr = nil
+for i, v in pairs(game:GetService("Players"):GetChildren()) do
+table.insert(plrlist,v.Name)
+end
+local drop = drops:Dropdown("Choose Player", plrlist, function(y)
+for i, v in pairs(game.Players:GetPlayers()) do
+if v.Name == y then
+plr = y
+end
+end
+end)
+drops:Button("Refresh Player", function() 
+drop:Clear()
+for i, b in pairs(game.Players:GetPlayers()) do
+drop:Add(b.Name)
+end
+end)
+local sldr = drops:Slider("Player Hitbox", 0, 1000, 0, function(t)
+local plr1 = game.Players.LocalPlayer
+if game.Players ~= plr1 and game.Players[plr].Character:FindFirstChild("HumanoidRootPart") then
+local sizeArg = t
+			local Size = Vector3.new(sizeArg,sizeArg,sizeArg)
+			local Root = game.Players[plr].Character:FindFirstChild("HumanoidRootPart")
+			if Root:IsA("BasePart") then
+		if not sizeArg == 1 then
+					Root.Size = Vector3.new(2,1,1)
+					Root.Transparency = 0.4
+				else
+					Root.Size = Size
+					Root.Transparency = 0.4
+				end
+end
+end
+end)
+drops:Button("Hitbox 80", function()
+sldr:Change(80)
+end)
+drops:Button("Hitbox 150", function()
+sldr:Change(150)
+end)
+drops:Button("Hitbox 300", function()
+sldr:Change(300)
+end)
+drops:Button("Hitbox 500", function()
+sldr:Change(500)
+end)
+drops:Button("Hitbox 1000", function()
+sldr:Change(1000)
+end)
+drops:Button("Hitbox 2500", function()
+sldr:Change(2500)
+end)
+drops:Button("Hitbox all Player", function()
+local plr = game.Players.LocalPlayer
+Players = game:GetService("Players")
+	for i, v in pairs(Players:GetPlayers()) do
+if v ~= plr and v.Character:FindFirstChild("HumanoidRootPart") then
+local sizeArg = 100
+			local Size = Vector3.new(sizeArg,sizeArg,sizeArg)
+			local Root = v.Character:FindFirstChild("HumanoidRootPart")
+			if Root:IsA("BasePart") then
+		if not sizeArg == 1 then
+					Root.Size = Vector3.new(2,1,1)
+					Root.Transparency = 0.4
+				else
+					Root.Size = Size
+					Root.Transparency = 0.4
+				end
+end
+end
+end
+end)
   local sldrs = serv:Channel("Walk Speed")   
   sldrs:Button("Clear", function(v)   
    game.Players.LocalPlayer.Character.Humanoid.HipHeight = 2   
