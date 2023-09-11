@@ -359,6 +359,28 @@ for i, b in pairs(game.Players:GetPlayers()) do
 drop:Add(b.Name)
 end
 end)
+drops:Toggle("Super Ultra DAMGE Attack",false, function(v)  
+  getgenv().autop = v; 
+  spawn(function()  
+  while autop do wait() 
+ if not getgenv().autop then break end 
+  for i, c in pairs(game.Players:GetChildren()) do  
+  if c.ClassName == "Player" then  
+  for i, f in pairs(c:GetChildren()) do  
+  if f:IsA("Backpack") then  
+  for i, a in pairs(f:GetDescendants()) do  
+  if a:IsA("RemoteEvent") and a.Name == "Hitbox" then  
+  a:FireServer(1, 0)  
+ break; 
+  end  
+  end  
+  end  
+  end  
+  end  
+  end  
+  end  
+  end)  
+  end) 
 local sldr = drops:Slider("Player Hitbox", 0, 1000, 0, function(t)
 local plr1 = game.Players.LocalPlayer
 if game.Players ~= plr1 and game.Players[plr].Character:FindFirstChild("HumanoidRootPart") then
