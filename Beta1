@@ -118,7 +118,7 @@ end
  end) 
 drops:Toggle("Choose Weapon To Fast Actack",false, function(v)
 if Weapon == nill then
-DiscordLib:Notification("Warning", "Choose Weapon to AutoEquip", "Ok")
+DiscordLib:Notification("Warning", "Choose Weapon to Fast Attack", "Ok")
 elseif Weapon ~= nil then
  getgenv().e = v 
  spawn(function() 
