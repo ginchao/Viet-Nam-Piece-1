@@ -132,7 +132,10 @@ elseif Weapon ~= nil then
  end)
 end
  end) 
- drops:Toggle("Choose Weapon To x5 Fast Actack",false, function(v) 
+ drops:Toggle("Choose Weapon To x5 Fast Actack",false, function(v)
+if Weapon == nill then
+DiscordLib:Notification("Warning", "Choose Weapon to Fast Atack x5", "Ok")
+elseif Weapon ~= nil then
  for _ = 1,5 do 
  getgenv().e = v 
  spawn(function() 
@@ -147,8 +150,12 @@ end
  end 
  end) 
  end 
+end
  end) 
  drops:Toggle("Choose Weapon To x10 Fast Actack",false, function(v) 
+if Weapon == nill then
+DiscordLib:Notification("Warning", "Choose Weapon to Fast Attack x10, "Ok")
+elseif Weapon ~= nil then
  for _ = 1,10 do 
  getgenv().e = v 
  spawn(function() 
@@ -163,8 +170,12 @@ end
  end 
  end) 
  end 
+end
  end) 
  drops:Toggle("Choose Weapon To X20 Actack",false, function(v) 
+if Weapon == nill then
+DiscordLib:Notification("Warning", "Choose Weapon to Fast Attack x20", "Ok")
+elseif Weapon ~= nil then
  for _ = 1,20 do 
  getgenv().e = v 
  spawn(function() 
@@ -179,6 +190,7 @@ end
  end 
  end) 
  end 
+end
  end) 
  drops:Toggle("Grab Any Tool Drop",false, function(l) 
  getgenv().grabtools = l 
@@ -230,18 +242,29 @@ end)
  end 
  end) 
  drops:Button("Teleport To Player", function() 
+if plr == nill then
+DiscordLib:Notification("Warning", "Choose Player to Teleport Player", "Ok")
+elseif plr ~= nil then
  game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = game.Workspace[plr].HumanoidRootPart.CFrame 
+end
  end) 
  drops:Button("Choose Player To Super Ultra Skill", function() 
+if plr == nill then
+DiscordLib:Notification("Warning", "Choose Player to Super Ultra Skill", "Ok")
+elseif plr ~= nil then
  game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = game.Workspace[plr].HumanoidRootPart.CFrame 
  wait(0.1) 
  for i,v in pairs(game:GetDescendants()) do 
  if v:IsA("RemoteEvent") and v.Name == "Fire" then 
  v:FireServer() 
  end 
- end 
+ end
+end
  end) 
  drops:Toggle("Auto Teleport Player",false, function(t) 
+if plr == nill then
+DiscordLib:Notification("Warning", "Choose Player to Auto Teleport Player", "Ok")
+elseif plr ~= nil then
  getgenv().autotele = t 
  spawn(function() 
  while autotele do wait() 
@@ -250,8 +273,12 @@ end)
  end) 
  end 
  end) 
+end
  end) 
  drops:Toggle("Auto Bring Player",false, function(a) 
+if plr == nill then
+DiscordLib:Notification("Warning", "Choose Player to Bring Player", "Ok")
+elseif plr ~= nil then
  getgenv().AutoBr = a 
  spawn(function() 
  while AutoBr do wait() 
@@ -265,8 +292,12 @@ end)
  end) 
  end 
  end) 
+end
  end) 
  drops:Toggle("Auto Tween Bring Player",false, function(p) 
+if plr == nill then
+DiscordLib:Notification("Warning", "Choose Player to Tween Bring Player", "Ok")
+elseif plr ~= nil then
  getgenv().autobri = p 
  spawn(function() 
  while autobri do wait() 
@@ -279,6 +310,7 @@ end)
  end) 
  end 
  end) 
+end
  end) 
  drops:Toggle("Auto Bring All Player",false, function(t) 
  getgenv().autobring1 = t
@@ -390,6 +422,9 @@ drops:Toggle("Super Ultra DAMGE Attack",false, function(v)
   end)  
   end) 
 local sldr = drops:Slider("Player Hitbox", 0, 2500, 0, function(t)
+if plr == nill then
+DiscordLib:Notification("Warning", "Choose Player to Hitbox Player", "Ok")
+elseif plr ~= nil then
 local plr1 = game.Players.LocalPlayer
 if game.Players ~= plr1 and game.Players[plr].Character:FindFirstChild("HumanoidRootPart") then
 local sizeArg = t
@@ -403,6 +438,7 @@ local sizeArg = t
 					Root.Size = Size
 					Root.Transparency = 0.4
 				end
+end
 end
 end
 end)
