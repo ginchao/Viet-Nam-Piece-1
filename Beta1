@@ -293,12 +293,9 @@ elseif plr ~= nil then
  spawn(function() 
  while AutoBr do wait() 
  pcall(function() 
- while AutoBr==true do wait() 
- spawn(function() 
+ 
   game.Workspace[plr].HumanoidRootPart.CFrame =  
  game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame * CFrame.new(0, 0, -5) wait() 
- end) 
- end 
  end) 
  end 
  end) 
@@ -312,11 +309,11 @@ elseif plr ~= nil then
  spawn(function() 
  while autobri do wait() 
  pcall(function() 
- while autobri do wait() 
+
  local ok = CFrame.new(game.Players.LocalPlayer.Character.HumanoidRootPart.Position) 
  local tween = game.TweenService:Create(game.Workspace[plr].HumanoidRootPart, TweenInfo.new(), {CFrame = ok * CFrame.new(0, 5, 0)})  
  tween:Play() wait() 
- end 
+ 
  end) 
  end 
  end) 
