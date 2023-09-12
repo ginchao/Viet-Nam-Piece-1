@@ -154,7 +154,7 @@ end
  end) 
  drops:Toggle("Choose Weapon To x10 Fast Actack",false, function(v) 
 if Weapon == nill then
-DiscordLib:Notification("Warning", "Choose Weapon to Fast Attack x10, "Ok")
+DiscordLib:Notification("Warning", "Choose Weapon to Fast Attack x10", "Ok")
 elseif Weapon ~= nil then
  for _ = 1,10 do 
  getgenv().e = v 
