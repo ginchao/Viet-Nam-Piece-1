@@ -60,22 +60,17 @@ tgls:Toggle("Auto Buy Fruit Normal",false, function(v)
 getgenv().auto = v;
 spawn(function()
 while auto do wait()
-pcall(function()
-if auto == false then break; end
+if not auto then break; end
 fireclickdetector(game:GetService("Workspace")["STARTER ISLAND [ Lv 1+ ]"].Shop[" "].RANDOM) wait()
-
-end)
 end
 end)
 end)
 tgls:Toggle("Auto Buy Secret Fruit",false, function(v)
 getgenv().auto1 = v;
 spawn(function()
-while auto do wait()
-pcall(function()
-if auto1 == false then break; end
+while auto1 do wait()
+if not auto1 then break; end
 fireclickdetector(game:GetService("Workspace")["STARTER ISLAND [ Lv 1+ ]"]["Secret Random"].RANDOM) wait()
-end)
 end
 end)
 end)
