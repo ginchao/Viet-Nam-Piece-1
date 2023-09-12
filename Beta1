@@ -100,8 +100,12 @@ end)
  end 
  end 
  end) 
- drops:Toggle("Auto Equip",false, function(a) 
+ drops:Toggle("Auto Equip",false, function(a)
+if Weapon == nill then
+DiscordLib:Notification("Warning", "Choose Weapon to AutoEquip", "Ok")
+elseif Weapon ~= nil then
          AutoEquiped = a 
+end
  end) 
  spawn(function() 
          while wait() do 
