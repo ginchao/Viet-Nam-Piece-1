@@ -61,8 +61,9 @@ getgenv().auto = v;
 spawn(function()
 while auto do wait()
 pcall(function()
-fireclickdetector(game:GetService("Workspace")["STARTER ISLAND [ Lv 1+ ]"].Shop[" "].RANDOM) wait()
 if auto == false then break; end
+fireclickdetector(game:GetService("Workspace")["STARTER ISLAND [ Lv 1+ ]"].Shop[" "].RANDOM) wait()
+
 end)
 end
 end)
@@ -72,8 +73,8 @@ getgenv().auto1 = v;
 spawn(function()
 while auto do wait()
 pcall(function()
-fireclickdetector(game:GetService("Workspace")["STARTER ISLAND [ Lv 1+ ]"]["Secret Random"].RANDOM) wait()
 if auto1 == false then break; end
+fireclickdetector(game:GetService("Workspace")["STARTER ISLAND [ Lv 1+ ]"]["Secret Random"].RANDOM) wait()
 end)
 end
 end)
