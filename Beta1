@@ -40,7 +40,6 @@ wait(0.7) game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.ne
 wait(0.7) game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(2568.78198, 51.7689095, -56.6604958, -0.453282833, 0, 0.891366661, 0, 0.99999994, -0, -0.89136678, 0, -0.453282773)*CFrame.new(0, 14, 0)
 wait(0.7) game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(-3475.6543, 66.9159241, 3698.27271, 0.816925108, 0, -0.576743841, -0, 1.00000012, -0, 0.576743841, 0, 0.816925108)*CFrame.new(0, 27, 0)
 end)
-tgls:Label("---------------_----------------")
 tgls:Toggle("Auto Buy Yoruv3",false, function(v)
 for _ = 1,3 do
 getgenv().autoyoruv3 = v
@@ -69,12 +68,12 @@ end
 end)
 end)
 tgls:Toggle("Auto Buy Secret Fruit",false, function(v)
-getgenv().auto = v;
+getgenv().auto1 = v;
 spawn(function()
 while auto do wait()
 pcall(function()
 fireclickdetector(game:GetService("Workspace")["STARTER ISLAND [ Lv 1+ ]"]["Secret Random"].RANDOM) wait()
-if auto == false then break; end
+if auto1 == false then break; end
 end)
 end
 end)
