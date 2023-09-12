@@ -117,6 +117,9 @@ end
          end 
  end) 
 drops:Toggle("Choose Weapon To Fast Actack",false, function(v)
+if Weapon == nill then
+DiscordLib:Notification("Warning", "Choose Weapon to AutoEquip", "Ok")
+elseif Weapon ~= nil then
  getgenv().e = v 
  spawn(function() 
  while e == true do 
@@ -127,6 +130,7 @@ drops:Toggle("Choose Weapon To Fast Actack",false, function(v)
  end) 
  end 
  end)
+end
  end) 
  drops:Toggle("Choose Weapon To x5 Fast Actack",false, function(v) 
  for _ = 1,5 do 
