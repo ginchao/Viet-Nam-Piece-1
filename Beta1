@@ -705,7 +705,12 @@ local btns = serv:Channel("Mics")
        Lighting.OutdoorAmbient = Color3.fromRGB(255, 255, 255)   
        Lighting.Outlines = true   
    end   
-   end)  
+   end)
+btns:Button("Rejoin", function()
+local tps = game:GetService("TeleportService")
+		local plr = game:GetService("Players").LocalPlayer
+		tps:TeleportToPlaceInstance(game.PlaceId, game.JobId, plr)
+	end)
   btns:Label("Script") 
  btns:Button("Lucky Block Battleground", function()  
   loadstring(game:HttpGet('https://raw.githubusercontent.com/ginchao/LuckyBlockBattleground/main/HttVeg'))()  
