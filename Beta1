@@ -713,6 +713,23 @@ local tps = game:GetService("TeleportService")
 		local plr = game:GetService("Players").LocalPlayer
 		tps:TeleportToPlaceInstance(game.PlaceId, game.JobId, plr)
 	end)
+local inf = nil
+btns:Toggle("Infjump", false, function(v)
+if inf then inf:Disconnect() end
+getgenv().infi = v
+local Player = game.Players.LocalPlayer
+if infi ~= inf then
+inf = game.UserInputService.JumpRequest:Connect(function()
+if infi == false then inf:Disconnect() end
+    Player.Character.Humanoid:ChangeState(Enum.HumanoidStateType.Jumping)
+wait()
+end)
+end
+end)
+
+
+
+
   btns:Label("Script") 
  btns:Button("Lucky Block Battleground", function()  
   loadstring(game:HttpGet('https://raw.githubusercontent.com/ginchao/LuckyBlockBattleground/main/HttVeg'))()  
@@ -729,6 +746,9 @@ local tps = game:GetService("TeleportService")
     end)    
     tool.Parent = game.Players.LocalPlayer.Backpack    
     end)   
+btns:Button("Infinte yield", function()
+loadstring(game:HttpGet('https://raw.githubusercontent.com/EdgeIY/infiniteyield/master/source'))()
+end)
   btns:Button("Anti Afk", function()   
    loadstring(game:HttpGet("https://raw.githubusercontent.com/ginchao/Anti-AFK/main/NO%20KICK" ,true))()   
    end)   
