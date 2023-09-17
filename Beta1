@@ -305,6 +305,22 @@ elseif plr ~= nil then
  end
 end
  end) 
+drops:Toggle("Spectate Player",false, function(h)
+if plr == nil then
+DiscordLib:Notification("Warning", "Choose Player to Super Ultra Skill, Need Loadmap", "Ok")
+elseif plr ~= nil then
+getgenv().view = h
+spawn(function()
+while view do wait()
+workspace.CurrentCamera.CameraSubject = game.Players[plr].Character
+if view == false then
+workspace.CurrentCamera.CameraSubject = game.Players.LocalPlayer.Character
+end
+end
+end)
+end
+end)
+
  drops:Toggle("Auto Teleport Player, Need LoadMap",false, function(t) 
 if plr == nil then
 DiscordLib:Notification("Warning", "Choose Player to Auto Teleport Player", "Ok")
