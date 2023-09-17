@@ -56,7 +56,7 @@ end)
 end
 end
 end)
-tgls:Toggle("Auto Buy Fruit Normal",false, function(v)
+tgls:Toggle("Auto Buy Fruit",false, function(v)
 getgenv().auto = v;
 spawn(function()
 while auto do wait()
