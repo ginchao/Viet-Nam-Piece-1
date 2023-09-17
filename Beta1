@@ -4,31 +4,39 @@ local DiscordLib = loadstring(game:HttpGet('https://raw.githubusercontent.com/gi
 local tgls = serv:Channel("Stats and Load Map")
 tgls:Toggle("Auto Sword",false, function(z)
 getgenv().autostats = z
+spawn(function()
 while autostats do wait()
 game:GetService("ReplicatedStorage"):FindFirstChild("StatSystem"):WaitForChild("Points"):FireServer("Sword")
 wait()
 end
 end)
+end)
 tgls:Toggle("Auto Fruit",false, function(z)
 getgenv().autostats = z
+spawn(function()
 while autostats do wait()
 game:GetService("ReplicatedStorage"):FindFirstChild("StatSystem"):WaitForChild("Points"):FireServer("DevilFruit")
 wait()
 end
 end)
+end)
 tgls:Toggle("Auto Health",false, function(z)
 getgenv().autostats = z
+spawn(function()
 while autostats do wait()
 game:GetService("ReplicatedStorage"):FindFirstChild("StatSystem"):WaitForChild("Points"):FireServer("MaxHealth")
 wait()
 end
 end)
+end)
 tgls:Toggle("Auto Melee",false, function(z)
 getgenv().autostats = z
+spawn(function()
 while autostats==true do wait()
 game:GetService("ReplicatedStorage"):FindFirstChild("StatSystem"):WaitForChild("Points"):FireServer("Melee")
 wait()
 end
+end)
 end)
 tgls:Button("LoadMap", function()
 game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(374.444855, 260.0784, -1132.96313, -0.986770988, -0, -0.162120432, -0, 1, -0, 0.162120432, 0, -0.986770988)*CFrame.new(0, 27, 0)
