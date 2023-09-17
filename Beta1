@@ -184,7 +184,27 @@ elseif Weapon ~= nil then
  pcall(function() 
  while e do wait() 
  spawn(function()        game:GetService("Players").LocalPlayer.Character[Weapon].Hitbox:FireServer(1, 1) 
- wait(0.1) 
+ wait() 
+ end) 
+ end 
+ end) 
+ end 
+ end) 
+ end 
+end
+ end) 
+drops:Toggle("Choose Weapon To X50 Actack",false, function(v) 
+if Weapon == nil then
+DiscordLib:Notification("Warning", "Choose Weapon to Fast Attack x50", "Ok")
+elseif Weapon ~= nil then
+ for _ = 1,50 do 
+ getgenv().e = v 
+ spawn(function() 
+ while e == true do 
+ pcall(function() 
+ while e do wait() 
+ spawn(function()        game:GetService("Players").LocalPlayer.Character[Weapon].Hitbox:FireServer(1, 1) 
+ wait() 
  end) 
  end 
  end) 
