@@ -257,16 +257,16 @@ end)
  end 
  end 
  end) 
- drops:Button("Teleport To Player", function() 
+ drops:Button("Teleport To Player, Need LoadMap", function() 
 if plr == nil then
 DiscordLib:Notification("Warning", "Choose Player to Teleport Player", "Ok")
 elseif plr ~= nil then
  game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = game.Workspace[plr].HumanoidRootPart.CFrame 
 end
  end) 
- drops:Button("Choose Player To Super Ultra Skill", function() 
+ drops:Button("Choose Player To Super Ultra Skill, Need Loadmap", function() 
 if plr == nil then
-DiscordLib:Notification("Warning", "Choose Player to Super Ultra Skill", "Ok")
+DiscordLib:Notification("Warning", "Choose Player to Super Ultra Skill, Need Loadmap", "Ok")
 elseif plr ~= nil then
  game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = game.Workspace[plr].HumanoidRootPart.CFrame 
  wait(0.1) 
@@ -277,7 +277,7 @@ elseif plr ~= nil then
  end
 end
  end) 
- drops:Toggle("Auto Teleport Player",false, function(t) 
+ drops:Toggle("Auto Teleport Player, Need LoadMap",false, function(t) 
 if plr == nil then
 DiscordLib:Notification("Warning", "Choose Player to Auto Teleport Player", "Ok")
 elseif plr ~= nil then
@@ -291,7 +291,7 @@ elseif plr ~= nil then
  end) 
 end
  end) 
- drops:Toggle("Auto Bring Player",false, function(a) 
+ drops:Toggle("Auto Bring Player, Need LoadMap",false, function(a) 
 if plr == nil then
 DiscordLib:Notification("Warning", "Choose Player to Bring Player", "Ok")
 elseif plr ~= nil then
@@ -307,7 +307,7 @@ elseif plr ~= nil then
  end) 
 end
  end) 
- drops:Toggle("Auto Tween Bring Player",false, function(p) 
+ drops:Toggle("Auto Tween Bring Player, Need LoadMap",false, function(p) 
 if plr == nil then
 DiscordLib:Notification("Warning", "Choose Player to Tween Bring Player", "Ok")
 elseif plr ~= nil then
@@ -325,7 +325,7 @@ elseif plr ~= nil then
  end) 
 end
  end) 
- drops:Toggle("Auto Bring All Player",false, function(t) 
+ drops:Toggle("Auto Bring All Player, Need LoadMap",false, function(t) 
  getgenv().autobring1 = t
 spawn(function()
 while getgenv().autobring1 do wait()
