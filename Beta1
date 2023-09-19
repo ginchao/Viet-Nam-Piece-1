@@ -344,7 +344,7 @@ elseif plr ~= nil then
  while AutoBr do wait() 
  pcall(function() 
  
-  game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = game.Players[plr].Character.HumanoidRootPart.CFrame * CFrame.new(0, 0, -5) wait() 
+ game.Players[plr].Character.HumanoidRootPart.CFrame = game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame * CFrame.new(0, 0, -5) wait() 
  end) 
  end 
  end) 
