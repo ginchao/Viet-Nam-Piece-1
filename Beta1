@@ -289,14 +289,14 @@ end)
 if plr == nil then
 DiscordLib:Notification("Warning", "Choose Player to Teleport Player", "Ok")
 elseif plr ~= nil then
- game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = game.Workspace[plr].HumanoidRootPart.CFrame 
+ game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = game.Players[plr].Character.HumanoidRootPart.CFrame 
 end
  end) 
  drops:Button("Choose Player To Super Ultra Skill, Need Loadmap", function() 
 if plr == nil then
 DiscordLib:Notification("Warning", "Choose Player to Super Ultra Skill, Need Loadmap", "Ok")
 elseif plr ~= nil then
- game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = game.Workspace[plr].HumanoidRootPart.CFrame 
+ game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = game.Players[plr].Character.HumanoidRootPart.CFrame 
  wait(0.1) 
  for i,v in pairs(game:GetDescendants()) do 
  if v:IsA("RemoteEvent") and v.Name == "Fire" then 
@@ -307,7 +307,7 @@ end
  end) 
 drops:Toggle("Spectate Player",false, function(h)
 if plr == nil then
-DiscordLib:Notification("Warning", "Choose Player to Super Ultra Skill, Need Loadmap", "Ok")
+DiscordLib:Notification("Warning", "Choose Player to Spectate, Need Loadmap", "Ok")
 elseif plr ~= nil then
 getgenv().view = h
 spawn(function()
@@ -329,7 +329,7 @@ elseif plr ~= nil then
  spawn(function() 
  while autotele do wait() 
  pcall(function() 
- game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = game.Workspace[plr].HumanoidRootPart.CFrame * CFrame.new(0, 0, 6) wait() 
+ game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = game.Players[plr].Character.HumanoidRootPart.CFrame * CFrame.new(0, 0, 6) wait() 
  end) 
  end 
  end) 
@@ -344,8 +344,7 @@ elseif plr ~= nil then
  while AutoBr do wait() 
  pcall(function() 
  
-  game.Workspace[plr].HumanoidRootPart.CFrame =  
- game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame * CFrame.new(0, 0, -5) wait() 
+  game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = game.Players[plr].Character.HumanoidRootPart.CFrame * CFrame.new(0, 0, -5) wait() 
  end) 
  end 
  end) 
@@ -361,7 +360,7 @@ elseif plr ~= nil then
  pcall(function() 
 
  local ok = CFrame.new(game.Players.LocalPlayer.Character.HumanoidRootPart.Position) 
- local tween = game.TweenService:Create(game.Workspace[plr].HumanoidRootPart, TweenInfo.new(), {CFrame = ok * CFrame.new(0, 5, 0)})  
+ local tween = game.TweenService:Create(game.Players[plr].Character.HumanoidRootPart, TweenInfo.new(), {CFrame = ok * CFrame.new(0, 5, 0)})  
  tween:Play() wait() 
  
  end) 
