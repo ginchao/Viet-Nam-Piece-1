@@ -134,7 +134,7 @@ elseif Weapon ~= nil then
  while ie == true do 
  pcall(function() 
  while ie do wait()  game:GetService("Players").LocalPlayer.Character[Weapon].Hitbox:FireServer(1, 1) 
- wait(0.11) 
+ wait() 
  end 
  end) 
  end 
@@ -152,7 +152,7 @@ elseif Weapon ~= nil then
  pcall(function() 
  while ea do wait() 
  pcall(function()        game:GetService("Players").LocalPlayer.Character[Weapon].Hitbox:FireServer(1, 1) 
- wait(0.11) 
+ wait() 
  end) 
  end 
  end) 
@@ -172,7 +172,7 @@ elseif Weapon ~= nil then
  pcall(function() 
  while euta do wait() 
  pcall(function()        game:GetService("Players").LocalPlayer.Character[Weapon].Hitbox:FireServer(1, 1) 
- wait(0.1) 
+ wait() 
  end) 
  end 
  end) 
