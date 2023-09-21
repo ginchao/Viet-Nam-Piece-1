@@ -135,8 +135,8 @@ if quest == "Bandit" then
 for i, v in pairs(game:GetService("Workspace")["NPC DAMAGE"]:GetChildren()) do
 if v:IsA("Model") and v.Name == "Bandit"  then
 v.HumanoidRootPart.CFrame = plrmain.Character.HumanoidRootPart.CFrame*CFrame.new(0,0,-6)
-elseif quest == "Boss Bandit" then
-game:GetService("Workspace")["NPC DAMAGE"].Boss.HumanoidRootPart.CFrame = plrmain.Character.HumanoidRootPart.CFrame*CFrame.new(0,0,-6)
+elseif quest == "Boss Bandit" and v.Name == "Boss" then
+v.HumanoidRootPart.CFrame = plrmain.Character.HumanoidRootPart.CFrame*CFrame.new(0,0,-6)
 end
 end
 end
