@@ -129,7 +129,7 @@ drops:Toggle("Auto Bring Mob Choose", false, function(mob)
 local plrmain = game.Players.LocalPlayer
 getgenv().bring = mob
 spawn(function()
-while being do wait()
+while bring do wait()
 pcall(function()
 if quest == "Bandit" then
 for i, v in pairs(game:GetService("Workspace")["NPC DAMAGE"]:GetChildren()) do
