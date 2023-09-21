@@ -125,12 +125,31 @@ end
 end)
 end
 end)
+drops:Toggle("Auto Bring Mob Choose", false, function(mob)
+local plrmain = game.Players.LocalPlayer
+getgenv().bring = mob
+spawn(function()
+while being do wait()
+pcall(function()
+if quest == "Bandit" then
+for i, v in pairs(game:GetService("Workspace")["NPC DAMAGE"]:GetChildren()) do
+if v:IsA("Model") and v.Name == "Bandit"  then
+v.HumanoidRootPart.CFrame = plrmain.Character.HumanoidRootPart.CFrame*CFrame.new(0,0,-6)
+elseif quest == "Boss Bandit" then
+game:GetService("Workspace")["NPC DAMAGE"].Boss.HumanoidRootPart.CFrame = plrmain.Character.HumanoidRootPart.CFrame*CFrame.new(0,0,-6)
+end
+end
+end
+end)
+end
+end)
+end)
 local drop = drops:Dropdown("Mob lv 1000 > lv 2000", {"MMM Boss","Dark Boss","God Boss","Red Hair"}, function(y)
 if y == "MMM Boss" or y == "Dark Boss" or y == "God Boss" or y == "Red Hair" then
 quest = y
 end
 end)
-drops:Toggle("auto",false, function(questauto)
+drops:Toggle"Auto Quest",false, function(questauto)
 getgenv().autoquest = questauto
 spawn(function()
 while autoquest do wait()
