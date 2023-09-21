@@ -149,7 +149,7 @@ if y == "MMM Boss" or y == "Dark Boss" or y == "God Boss" or y == "Red Hair" the
 quest = y
 end
 end)
-drops:Toggle"Auto Quest",false, function(questauto)
+drops:Toggle("Auto Quest",false, function(questauto)
 getgenv().autoquest = questauto
 spawn(function()
 while autoquest do wait()
