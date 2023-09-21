@@ -125,6 +125,44 @@ end
 end)
 end
 end)
+local drop = drops:Dropdown("Mob lv 1000 > lv 2000", {"MMM Boss","Dark Boss","God Boss"}, function(y)
+if y == "MMM Boss" or y == "Dark Boss" or y == "God Boss" then
+quest = y
+end
+end)
+drops:Toggle("auto",false, function(questauto)
+getgenv().autoquest = questauto
+spawn(function()
+while autoquest do wait()
+pcall(function()
+if quest == "MMM Boss" then
+game:GetService("Workspace")["MMM ISLANDDD [Lv900+]"]["MMM QUEST"].ClickPart.QuestTake.QuestTake.Accept1.RemoteEvent:FireServer()
+elseif quest == "Dark Boss" and quest ~= nil then
+game:GetService("Workspace")["DAK ISLAND [Lv 1350+]"]["QUEST DARK"].ClickPart.QuestTake.QuestTake.Accept1.RemoteEvent:FireServer()
+elseif quest == "God Boss" and quest ~= nil then
+game:GetService("Workspace")["DAK ISLAND [Lv 1350+]"]["QUEST DARK"].ClickPart.QuestTake.QuestTake.Accept2.RemoteEvent:FireServer()
+end
+end)
+end
+end)
+end)
+drops:Toggle("Auto Bring",false, function(mob)
+local plrmain = game.Players.LocalPlayer
+getgenv().autobring = mob
+spawn(function()
+while autobring do wait()
+pcall(function()
+if quest == "Dark Boss"  then
+game:GetService("Workspace")["NPC DAMAGE"].Raid.HumanoidRootPart.CFrame = plrmain.Character.HumanoidRootPart.CFrame*CFrame.new(0,0,-7)
+elseif quest == "MMM Boss" then
+game:GetService("Workspace")["NPC DAMAGE"].mmm.HumanoidRootPart.CFrame = plrmain.Character.HumanoidRootPart.CFrame*CFrame.new(0,0,-7)
+elseif quest == "God Boss" then
+game:GetService("Workspace")["NPC DAMAGE"].God.HumanoidRootPart.CFrame = plrmain.Character.HumanoidRootPart.CFrame*CFrame.new(0,0,-7)
+end
+end)
+end
+end)
+end)
  local drops = serv:Channel("Weapon") 
  local Weaponlist = {} 
  local Weapon = nil 
