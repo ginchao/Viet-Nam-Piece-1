@@ -598,7 +598,7 @@ drops:Toggle("Fast Acttack",false, function(v)
 getgenv().faset = v;
 spawn(function()
 while faset do wait()
-if not getgenv().fast then break; end
+if not getgenv().faset then break; end
 pcall(function()
 for i, c in pairs(game.Players.LocalPlayer:FindFirstChild("Backpack"):GetChildren()) do
 if c:IsA("Tool") and c:FindFirstChild("Hitbox") then
@@ -620,7 +620,7 @@ for _ = 1,5 do
 getgenv().fastq = e;
 spawn(function()
 while fastq do wait()
-if not getgenv().fast then break; end
+if not getgenv().fastq then break; end
 pcall(function()
 for i, c in pairs(game.Players.LocalPlayer:FindFirstChild("Backpack"):GetChildren()) do
 if c:IsA("Tool") and c:FindFirstChild("Hitbox") then
@@ -666,7 +666,7 @@ for _ = 1,30 do
 getgenv().fasst = b;
 spawn(function()
 while fasst do wait()
-if not getgenv().fast then break; end
+if not getgenv().fasst then break; end
 pcall(function()
 for i, c in pairs(game.Players.LocalPlayer:FindFirstChild("Backpack"):GetChildren()) do
 if c:IsA("Tool") and c:FindFirstChild("Hitbox") then
@@ -689,7 +689,7 @@ for _ = 1,60 do
 getgenv().fasta = a;
 spawn(function()
 while fasta do wait()
-if not getgenv().fast then break; end
+if not getgenv().fasta then break; end
 pcall(function()
 for i, c in pairs(game.Players.LocalPlayer:FindFirstChild("Backpack"):GetChildren()) do
 if c:IsA("Tool") and c:FindFirstChild("Hitbox") then
@@ -712,7 +712,7 @@ for _ = 1,100 do
 getgenv().fasts = e;
 spawn(function()
 while fasts do wait()
-if not getgenv().fast then break; end
+if not getgenv().fasts then break; end
 pcall(function()
 for i, c in pairs(game.Players.LocalPlayer:FindFirstChild("Backpack"):GetChildren()) do
 if c:IsA("Tool") and c:FindFirstChild("Hitbox") then
