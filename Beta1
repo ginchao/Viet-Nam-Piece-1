@@ -85,6 +85,8 @@ end)
 local drops = serv:Channel("Mob")
 local quest = nil
 local drop = drops:Dropdown("Mob lv 0 > lv 1000", {"Bandit","Boss Bandit","Snow Bandit","Boss Snow Bandit","Boss Sand","Sky Bandit","Boss Sky Bandit","White Man","Blue Fire","Big Man","Flame User"}, function(y)
+local plrmainhr = game.Players.LocalPlayer
+.Character.HumanoidRootPart
 if y == "Bandit" or y == "Boss Bandit" or y == "Snow Bandit" or y == "Boss Snow Bandit" or y == "Boss Sand" or y == "Sky Bandit" or y == "Boss Sky Bandit" or y == "White Man" or y == "Blue Fire" or y == "Big Man" or y == "Flame User"then
 quest = y
 if y == "Bandit" or y == "Boss Bandit" then
@@ -136,6 +138,57 @@ end
  end) 
  end 
  end)
+drops:Toggle("Auto Bring Mob Choose", false, function(mob) 
+local plrmain = game.Players.LocalPlayer 
+local fiv = game:GetService("Workspace")["NPC DAMAGE"]
+if quest == nil then 
+DiscordLib:Notification("Warning", "Choose Mob To Bring", "Ok") 
+elseif quest ~= nil then 
+getgenv().bring = mob 
+spawn(function() 
+while bring do wait() 
+pcall(function() 
+if quest == "Bandit" then 
+for i, v in pairs(fiv:GetChildren()) do 
+if v.Name == "Bandit" then 
+v.HumanoidRootPart.CFrame = plrmain.Character.HumanoidRootPart.CFrame*CFrame.new(0,0,-6) 
+end
+end
+elseif quest == "Snow Bandit" then 
+for i, e in pairs(fiv:GetChildren()) do
+if e.Name == "SnowBandit" then
+e.HumanoidRootPart.CFrame = plrmain.Character.HumanoidRootPart.CFrame*CFrame.new(0,0,-6)
+end
+end
+elseif quest == "Sky Bandit" then
+for i, b in pairs(fiv: GetChildren()) do
+if b.Name == "Sky" then
+b.HumanoidRootPart.CFrame = plrmain.Character.HumanoidRootPart.CFrame*CFrame.new(0,0,-6)
+end
+end
+elseif quest == "Boss Bandit" then
+game.Workspace["NPC DAMAGE"].Boss.HumanoidRootPart.CFrame = plrmain.Character.HumanoidRootPart.CFrame*CFrame.new(0,0,-6)
+elseif quest == "Boss Snow Bandit" then
+game.Workspace["NPC DAMAGE"].SnowBoss.HumanoidRootPart.CFrame = plrmain.Character.HumanoidRootPart.CFrame*CFrame.new(0,0,-6)
+elseif quest == "Boss Sand" then
+game.Workspace["NPC DAMAGE"].Sand.HumanoidRootPart.CFrame = plrmain.Character.HumanoidRootPart.CFrame*CFrame.new(0,0,-6)
+elseif quest == "Boss Sky Bandit" then
+game.Workspace["NPC DAMAGE"].Enel.HumanoidRootPart.CFrame = plrmain.Character.HumanoidRootPart.CFrame*CFrame.new(0,0,-6)
+elseif quest == "White Man" then
+game.Workspace["NPC DAMAGE"].Killer.HumanoidRootPart.CFrame = plrmain.Character.HumanoidRootPart.CFrame*CFrame.new(0,0,-6)
+elseif quest == "Blue Fire" then
+game.Workspace["NPC DAMAGE"].Blue.HumanoidRootPart.CFrame = plrmain.Character.HumanoidRootPart.CFrame*CFrame.new(0,0,-6)
+elseif quest == "Big Man" then
+game.Workspace["NPC DAMAGE"].Big.HumanoidRootPart.CFrame = plrmain.Character.HumanoidRootPart.CFrame*CFrame.new(0,0,-6)
+elseif quest == "Flame User" then
+game.Workspace["NPC DAMAGE"].Ace.HumanoidRootPart.CFrame = plrmain.Character.HumanoidRootPart.CFrame*CFrame.new(0,0,-6)
+end
+end) 
+end 
+end) 
+end
+end)
+
 drops:Label("Mob 2")
 local drop = drops:Dropdown("Mob lv 1000 > lv 2000", {"MMM Boss","Dark Boss","God Boss","Red Hair"}, function(y)
 if y == "MMM Boss" or y == "Dark Boss" or y == "God Boss" or y == "Red Hair" then
