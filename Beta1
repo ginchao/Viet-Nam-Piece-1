@@ -96,7 +96,7 @@ plrmainhr.CFrame = CFrame.new(-970.516785, 38.5133743, 263.168549, -0.978147209,
 elseif y == "Boss Sand" then
 plrmainhr.CFrame = CFrame.new(-638.437134, 33.9301033, 1607.00757, -0.987915277, -0, -0.154995069, -0, 1, -0, 0.154995069, 0, -0.987915277)*CFrame.new(0,10,0)
 elseif y == "Sky Bandit" or y == "Boss Sky Bandit" then
-plrmainhr.CFrame = CFrame.new(-4596.47412, 4331.15967, 150.667847, -0.0648257956, -0, -0.997896552, -0, 1, -0, 0.997896671, 0, -0.0648257881)*CFrame.new(0,10,0)
+plrmainhr.CFrame = CFrame.new(-4596.47412, 4331.15967, 150.667847, -0.0648257956, -0, -0.997896552, -0, 1, -0, 0.997896671, 0, -0.0648257881)*CFrame.new(0,30,0)
 elseif y == "White Man" or y == "Blue Fire" or y == "Big Man" or y == "Flame User" then
 plrmainhr.CFrame = CFrame.new(-2270.16992, 88.6032257, 2128.39258, -0.0399548337, -0, -0.999201536, -0, 1.00000012, -0, 0.999201536, 0, -0.0399548337)*CFrame.new(0,10,0)
 end
