@@ -594,6 +594,7 @@ break;
  end 
  end)
 local drops = serv:Channel("Player2")
+drops:Label("Fast Attack v2 No Choose")
 drops:Toggle("Fast Acttack ",false, function(e)
 getgenv().fasst = e
 if not getgenv().fasst then game.Players.LocalPlayer.Character.Humanoid:UnequipTools() end
