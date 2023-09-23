@@ -203,7 +203,7 @@ plrmainhr.CFrame = CFrame.new(1239.58276, 5268.82568, -139.64418, 0.97182107, -6
 end
 end
 end)
-drops:Toggle("Auto Quest",false, function(questauto)
+drops:Toggle("Choose Mob To Auto Quest ",false, function(questauto)
 getgenv().autoquest = questauto
 spawn(function()
 while autoquest do wait()
@@ -221,7 +221,7 @@ end)
 end
 end)
 end)
-drops:Toggle("Auto Bring",false, function(mob)
+drops:Toggle("Choose Mob To Auto Bring",false, function(mob)
 local plrmain = game.Players.LocalPlayer
 getgenv().autobring = mob
 spawn(function()
