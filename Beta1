@@ -496,6 +496,7 @@ end
 if plr == nil then
 DiscordLib:Notification("Warning", "Choose Player to Bring Player", "Ok")
 elseif plr ~= nil then
+for _ = 1,10 do wait()
  getgenv().AutoBr = a 
  spawn(function() 
  while AutoBr do wait() 
@@ -505,6 +506,7 @@ elseif plr ~= nil then
  end) 
  end 
  end) 
+end
 end
  end) 
  drops:Toggle("Auto Tween Bring Player, Need LoadMap",false, function(p) 
@@ -526,6 +528,7 @@ elseif plr ~= nil then
 end
  end) 
  drops:Toggle("Auto Bring All Player, Need LoadMap",false, function(t) 
+for _ = 1,10 do wait()
  getgenv().autobring1 = t
 spawn(function()
 while getgenv().autobring1 do wait()
@@ -539,6 +542,7 @@ end
 end)
 end
 end)
+end
  end) 
  drops:Label("Need Player In Your Sever") 
  drops:Toggle("Super Ultra DAMGE Attack",false, function(v) 
