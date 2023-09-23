@@ -1081,7 +1081,7 @@ local tps = game:GetService("TeleportService")
 	end)
 btns:Button("Teleport To Second Sea", function()
 local tps = game:GetService("TeleportService")
-DiscordLib:Notification("Warning","Teleport To Second Sea...","...")
+DiscordLib:Notification("Wait a Sec","Teleport To Second Sea...","...")
 tps:Teleport("7258239416")
 end)
 local inf = nil
