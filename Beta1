@@ -1377,7 +1377,7 @@ end)
 end
 end)
 local chat = game.Players.LocalPlayer.Name
-local drops = serv:Channel("Player Test","Hello! "..plr)
+local drops = serv:Channel("Player Test","Hello! ""..plr)
 local Weaponlist = {}
 local Weapon = nil
 for i, v in pairs(game:GetService("Players"):GetChildren()) do
