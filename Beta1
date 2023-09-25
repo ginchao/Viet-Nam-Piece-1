@@ -1,6 +1,6 @@
 
 local per = game.Players.LocalPlayer.Name
-if per == "NHB12" or per == "ginchao12" or per == "ZzKenKK1" or per == "haurhj" or per == "roxblox_1238" or per == "minhcc15562" or per == "Quanphan1299" then
+if per == "NHBD12" or per == "ginchao12" or per == "ZzKenKK1" or per == "haurhj" or per == "roxblox_1238" or per == "minhcc15562" or per == "Quanphan1299" then
 local DiscordLib = loadstring(game:HttpGet('https://raw.githubusercontent.com/ginchao/Discord-Lib/main/Discord-Lib'))() 
  local win = DiscordLib:Window("Test Hub") 
 DiscordLib:Notification("Premium Stars ⭐","Hello! ".."⭐"..per..".                                              ".."You Have Premium Stars So You Get All The Features Unlocked","Ok")
