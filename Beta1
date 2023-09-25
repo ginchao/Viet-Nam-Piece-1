@@ -4,7 +4,6 @@ if per == "NHBD12" or per == "ginchao12" or per == "ZzKenKK1" or per == "haurhj"
 local DiscordLib = loadstring(game:HttpGet('https://raw.githubusercontent.com/ginchao/Discord-Lib/main/Discord-Lib'))() 
  local win = DiscordLib:Window("Test Hub") 
 DiscordLib:Notification("Premium Stars ⭐","Hello! ".."⭐"..per..".                                              ".."You Have Premium Stars So You Get All The Features Unlocked","Ok")
-local serv = win:Server("Hello! "..plr.Name, "")
  local serv = win:Server("VietNamPiece Pvp 1", "")
 local tgls = serv:Channel("Stats and Load Map")
 tgls:Toggle("Auto Sword",false, function(z)
