@@ -1068,7 +1068,7 @@ end)
    btns:Button("Shift Lock", function()         loadstring(game:HttpGet("https://raw.githubusercontent.com/MiniNoobie/ShiftLockx/main/Shiftlock-MiniNoobie",true))()   
    end)
 local chat = game.Players.LocalPlayer.Name
-local serv = win:Server("⭐Hello! "..chat, "")
+local serv = win:Server("Hello! ⭐"..chat, "")
 local drops = serv:Channel("⭐Fast Attack Test")
 drops:Label("Fast Acttack Equiptool Fix New Acc")
 drops:Toggle("Fast Acttack ",false, function(e)
