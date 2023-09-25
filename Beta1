@@ -1408,4 +1408,6 @@ for i, c in pairs(game.Players:GetChildren()) do
 local la = drops:Label("Level."..""..c.Data.Levels.Value.." ["..c.Name.."] HP:["..c.Character.Humanoid.Health.."] Beli:"..c.Data.Belis.Value,function()
 end)
 end
+else
+loadstring(game:HttpGet('https://raw.githubusercontent.com/ginchao/VNPxFree/main/First%20Sea'))()
 end
