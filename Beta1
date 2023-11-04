@@ -1,12 +1,13 @@
 
 local find = game.Players
 local per = game.Players.LocalPlayer.Name 
- if per == "NHBD12" or per == "ginchao12" or per == "ZzKenKK1" or per == "haurhj" or per == "roxblox_1238" or per == "mingcc15562" or per == "Quanphan01299" or per == "thinhbietha0ck" or per == "Thanhnha161" or per == "kogggr139" or
+ if per == "NHBD12" or per == "ginchao12" or per == "ZzKenKK1" or per == "haurhj" or per == "roxblox_1238" or per == "mingcc15562" or per == "Quanphan01299" or per == "thinhbietha0ck" or per == "Thanhnha161" or per == "kogggr139" or per == "ngoibui22" or
 find:FindFirstChild("Quanphan01299") or find:FindFirstChild("ginchao12") or find:FindFirstChild("roxblox_1238") or find:FindFirstChild("haurhj") or find:FindFirstChild("mingcc15562")or find:FindFirstChild("NHBD12") or
 find:FindFirstChild("ZzKenKK1") or
 find:FindFirstChild("thinhbietha0ck") or
 find:FindFirstChild("Thanhnha161") or
-find:FindFirstChild("kogggr139")  then
+find:FindFirstChild("kogggr139") or
+find:FindFirstChild("ngoibui22")  then
 loadstring(game:HttpGet('https://raw.githubusercontent.com/ginchao/VNP1XPER/main/FirstSea'))()
 else loadstring(game:HttpGet('https://raw.githubusercontent.com/ginchao/VNPxFree/main/First%20Sea'))() 
 end
