@@ -1,6 +1,7 @@
 
 local find = game.Players
-find:FindFirstChild("Quanphan01299") or find:FindFirstChild("ginchao12") or find:FindFirstChild("roxblox_1238") or find:FindFirstChild("haurhj") or find:FindFirstChild("mingcc15562")or find:FindFirstChild("NHBD12") or
+if
+find:FindFirstChild("Quanphan01299") or find:FindFirstChild("ginchao12") or find:FindFirstChild("roxblox_1238") or find:FindFirstChild("haurhj") or find:FindFirstChild("mingcc15562") or find:FindFirstChild("NHBD12") or
 find:FindFirstChild("ZzKenKK1") or
 find:FindFirstChild("thinhbietha0ck") or
 find:FindFirstChild("Thanhnha161") or
