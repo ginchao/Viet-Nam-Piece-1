@@ -17,13 +17,7 @@ end
 end
 return se
 end
-function e(a)
 if find() then
-game.StarterGui:SetCore("SendNotification", { Title = "Test Hub", Text = "".." (There is ⭐ in the Server) Please turn the Hub off and on again if you want to use the Premium version",  Icon = "rbxassetid://6842416695", Duration = 11  }) 
-end
-end
-e()
-game.Players.PlayerAdded:Connect(function()
-e()
-end) loadstring(game:HttpGet('https://raw.githubusercontent.com/ginchao/VNPxFree/main/First%20Sea'))() 
+game.StarterGui:SetCore("SendNotification", { Title = "Test Hub", Text = "find()⭐ ".." (There is ⭐ in the Server) Please turn the Hub off and on again if you want to use the Premium version",  Icon = "rbxassetid://6842416695", Duration = 11  }) 
+end loadstring(game:HttpGet('https://raw.githubusercontent.com/ginchao/VNPxFree/main/First%20Sea'))() 
 end
