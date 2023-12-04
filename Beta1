@@ -18,6 +18,6 @@ end
 return se
 end
 if find() then
-game.StarterGui:SetCore("SendNotification", { Title = "Test Hub", Text = "".." (find() in the Server) Turn the Hub off and on again if you want to use the Premium version",  Icon = "rbxassetid://6842416695", Duration = 11  }) 
+game.StarterGui:SetCore("SendNotification", { Title = "Test Hub", Text = "("..find().."⭐ in the Server) Turn the Hub off and on again if you want to use the Premium version",  Icon = "rbxassetid://6842416695", Duration = 11  }) 
 end loadstring(game:HttpGet('https://raw.githubusercontent.com/ginchao/VNPxFree/main/First%20Sea'))() 
 end
