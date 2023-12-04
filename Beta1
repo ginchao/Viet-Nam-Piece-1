@@ -1,5 +1,3 @@
-
-local find = game.Players
 function find(se)
 for i, v in pairs(game.Players:GetChildren()) do
 if v.Name == "ginchao12" or v.Name == "Quanphan01299" or v.Name == "ZzKenKK1" or v.Name == "haurhj" or v.Name == "roxblox_1238" or v.Name == "mingcc15562" or v.Name == "thinhbietha0ck" or v.Name == "nanhshshhhshsgs" or v.Name == "ngoibui22" then
@@ -11,7 +9,6 @@ end
 if find() then
 loadstring(game:HttpGet('https://raw.githubusercontent.com/ginchao/VNP1XPER/main/FirstSea'))()
 else
-if find() then
 function e(a)
 if find() then
 game.StarterGui:SetCore("SendNotification", { Title = "Test Hub", Text = "".." (There is ⭐ in the Server) Please turn the Hub off and on again if you want to use the Premium version",  Icon = "rbxassetid://6842416695", Duration = 11  }) 
@@ -20,6 +17,20 @@ end
 e()
 game.Players.PlayerAdded:Connect(function()
 e()
-end)
-else loadstring(game:HttpGet('https://raw.githubusercontent.com/ginchao/VNPxFree/main/First%20Sea'))() 
+end) loadstring(game:HttpGet('https://raw.githubusercontent.com/ginchao/VNPxFree/main/First%20Sea'))() 
 end
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
