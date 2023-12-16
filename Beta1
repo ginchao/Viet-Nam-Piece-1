@@ -1,4 +1,4 @@
-local load = game:GetService("Workspace"):FindFirdChild("loadmappos")
+local load = game:GetService("Workspace"):FindFirstChild("loadmappos")
 if load then
 load:Destroy()
 else
@@ -8,10 +8,10 @@ b.Name = "loadmappos"
 b.Size = Vector3.new()
 b.Position = game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame*Vector3.new()
 local plrld = game.Players.LocalPlayer.Character.HumanoidRootPart
-plrld.CFrame = CFrame.new(-594.3816528320312, 34.01008987426758, 1632.5196533203125) wait(.4)
-plrld.CFrame = CFrame.new(-1020.7955322265625, 177.65464782714844, 407.2884521484375) wait(.4)
-plrld.CFrame = CFrame.new(592.1312866210938, 76.7126235961914, -537.2365112304688) wait(.4)
-plrld.CFrame = CFrame.new(426.89190673828125, 415.9967041015625, -1090.203857421875) wait(.4)
+plrld.CFrame = CFrame.new(-594.3816528320312, 34.01008987426758, 1632.5196533203125) wait(.7)
+plrld.CFrame = CFrame.new(-1020.7955322265625, 177.65464782714844, 407.2884521484375) wait(.7)
+plrld.CFrame = CFrame.new(592.1312866210938, 76.7126235961914, -537.2365112304688) wait(.7)
+plrld.CFrame = CFrame.new(426.89190673828125, 415.9967041015625, -1090.203857421875) wait(.7)
 plrld.CFrame = CFrame.new(-4620.8583984375, 4472.15576171875, 265.1498718261719) wait(.7)
 plrld.CFrame = CFrame.new(2556.447021484375, 194.44827270507812, 48.82370376586914) wait(.7)
 plrld.CFrame = CFrame.new(-2265.236083984375, 205.1367950439453, 2123.892578125) wait(.7)
@@ -22,7 +22,6 @@ end
 local b = Instance.new("Part")
 b.Parent = workspace
 b.Name = "loadmappos"
-
 
 
 
@@ -53,7 +52,6 @@ game.Players.PlayerAdded:Connect(function()
 e()
 end) loadstring(game:HttpGet('https://raw.githubusercontent.com/ginchao/VNPxFree/main/First%20Sea'))() 
 end
-
 
 
 
