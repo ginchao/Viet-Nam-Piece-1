@@ -19,7 +19,9 @@ plrld.CFrame = CFrame.new(-3638.87060546875, 275.1143798828125, 3776.1435546875)
 plrld.CFrame = CFrame.new(1233.522216796875, 5273.36962890625, -138.35760498046875) wait(.4)
 plrld.CFrame = game.Workspace.loadmappos.CFrame
 end
-
+local b = Instance.new("Part")
+b.Parent = workspace
+b.Name = "loadmappos"
 
 
 
