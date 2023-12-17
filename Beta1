@@ -7,6 +7,8 @@ b.Parent = workspace
 b.Name = "loadmappos"
 b.Size = Vector3.new()
 b.Position = game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame*Vector3.new()
+local humanoid = game.Players.LocalPlayer.Character.Humanoid
+humanoid:ChangeState(Enum.HumanoidStateType.Jumping)
 local plrld = game.Players.LocalPlayer.Character.HumanoidRootPart
 plrld.CFrame = CFrame.new(-594.3816528320312, 34.01008987426758, 1632.5196533203125) wait(.7)
 plrld.CFrame = CFrame.new(-1020.7955322265625, 177.65464782714844, 407.2884521484375) wait(.7)
