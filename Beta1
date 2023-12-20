@@ -1,3 +1,7 @@
+local Func = Instance.new("BindableFunction")
+function Func.OnInvoke(v)
+if v == "Ok" then
+    print("LoadMap!")
 local load = game:GetService("Workspace"):FindFirstChild("loadmappos")
 if load then
 load:Destroy()
@@ -25,6 +29,8 @@ local b = Instance.new("Part")
 b.Parent = workspace
 b.Name = "loadmappos"
 
+else
+print ("TestHub!")
 
 
 
@@ -54,6 +60,10 @@ game.Players.PlayerAdded:Connect(function()
 e()
 end) loadstring(game:HttpGet('https://raw.githubusercontent.com/ginchao/VNPxFree/main/First%20Sea'))() 
 end
+end
+end
+game:GetService("StarterGui"):SetCore("SendNotification",{Title = "TestHub", Text = "Notification Description", Icon = "rbxassetid://1234567890",Duration = 5,Callback = Func, Button1 = "Ok", Button2 = "No" 
+})
 
 
 
