@@ -10,9 +10,6 @@ local Func = Instance.new("BindableFunction")
 function Func.OnInvoke(v)
 if v == "Load Map+Test Hub" then
     print("LoadMap!")
-if not game.Players.LocalPlayer:FindFirstChild("Character") then
-repeat wait() until game.Players.LocalPlayer:FindFirstChild("Character")
-end
 local b = Instance.new("Part")
 b.Parent = workspace
 b.Name = "loadmappos"
