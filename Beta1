@@ -47,7 +47,7 @@ e()
 end) loadstring(game:HttpGet('https://raw.githubusercontent.com/ginchao/VNPxFree/main/First%20Sea'))() 
 end
 end
-game:GetService("StarterGui"):SetCore("SendNotification",{Title = "TestHub", Text = "Chọn Một Trong Hai ", Icon = "https://www.roblox.com/headshot-thumbnail/image?userId="..game.Players.LocalPlayer.UserId.."&width=100&height=100&format=png",Duration = 50,Callback = Func, Button1 = "Load Map+Test Hub", Button2 = " Bật Test Hub" 
+game:GetService("StarterGui"):SetCore("SendNotification",{Title = "TestHub", Text = "Hãy LoadMap Nếu Không Muốn Có Lỗi", Icon = "https://www.roblox.com/headshot-thumbnail/image?userId="..game.Players.LocalPlayer.UserId.."&width=100&height=100&format=png",Duration = 50,Callback = Func, Button1 = "Load Map", Button2 = " Bật Hub Ngay" 
 })
 
 
