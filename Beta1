@@ -8,7 +8,7 @@ return se
 end
 local Func = Instance.new("BindableFunction")
 function Func.OnInvoke(v)
-if v == "Load Map+Test Hub" then
+if v == "Load Map" then
     print("LoadMap!")
 local b = Instance.new("Part")
 b.Parent = workspace
