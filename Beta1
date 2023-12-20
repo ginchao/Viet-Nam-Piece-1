@@ -1,10 +1,14 @@
-local load = game:GetService("Workspace"):FindFirstChild("loadmappos")
-if load then
-load:Destroy()
-else
+function find(se)
+for i, v in pairs(game:GetService("Players"):GetChildren()) do
+if v.Name == "ginchao12" or v.Name == "Quanphan01299" or v.Name == "ZzKenKK1" or v.Name == "TimeoSamuell" or v.Name == "roxblox_1238" or v.Name == "mingcc15562" or v.Name == "thinhbietha0ck" or v.Name == "nanhshshhhshsgs" or v.Name == "ngoibui22" or v.Name == "Thanhnha161" then
+se = v.Name
+end
+end
+return se
+end
 local Func = Instance.new("BindableFunction")
 function Func.OnInvoke(v)
-if v == "Ok" then
+if v == "Load Map+Test Hub" then
     print("LoadMap!")
 local b = Instance.new("Part")
 b.Parent = workspace
@@ -24,23 +28,11 @@ plrld.CFrame = CFrame.new(-2265.236083984375, 205.1367950439453, 2123.892578125)
 plrld.CFrame = CFrame.new(-3638.87060546875, 275.1143798828125, 3776.1435546875) wait(.9)
 plrld.CFrame = CFrame.new(1233.522216796875, 5273.36962890625, -138.35760498046875) wait(.4)
 plrld.CFrame = game.Workspace.loadmappos.CFrame
+local load = game:GetService("Workspace"):FindFirstChild("loadmappos")
+load:Destroy()
 else
+end
 print ("TestHub!")
-end
-local b = Instance.new("Part")
-b.Parent = workspace
-b.Name = "loadmappos"
-
-
-
-function find(se)
-for i, v in pairs(game:GetService("Players"):GetChildren()) do
-if v.Name == "ginchao12" or v.Name == "Quanphan01299" or v.Name == "ZzKenKK1" or v.Name == "TimeoSamuell" or v.Name == "roxblox_1238" or v.Name == "mingcc15562" or v.Name == "thinhbietha0ck" or v.Name == "nanhshshhhshsgs" or v.Name == "ngoibui22" or v.Name == "Thanhnha161" then
-se = v.Name
-end
-end
-return se
-end
 if find() then
 loadstring(game:HttpGet('https://raw.githubusercontent.com/ginchao/VNP1XPER/main/FirstSea'))()
 else
@@ -55,8 +47,7 @@ e()
 end) loadstring(game:HttpGet('https://raw.githubusercontent.com/ginchao/VNPxFree/main/First%20Sea'))() 
 end
 end
-end
-game:GetService("StarterGui"):SetCore("SendNotification",{Title = "TestHub", Text = "Bạn Có Muốn Load Map Không?", Icon = "https://www.roblox.com/headshot-thumbnail/image?userId="..game.Players.LocalPlayer.UserId.."&width=100&height=100&format=png"",Duration = 5,Callback = Func, Button1 = "Ok", Button2 = "No" 
+game:GetService("StarterGui"):SetCore("SendNotification",{Title = "TestHub", Text = "Chọn Một Trong Hai ", Icon = "https://www.roblox.com/headshot-thumbnail/image?userId="..game.Players.LocalPlayer.UserId.."&width=100&height=100&format=png",Duration = 50,Callback = Func, Button1 = "Load Map+Test Hub", Button2 = " Bật Test Hub" 
 })
 
 
