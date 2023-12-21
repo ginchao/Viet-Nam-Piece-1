@@ -29,17 +29,10 @@ else
 end
 print ("TestHub!")
 if find then
+print("⭐")
 loadstring(game:HttpGet('https://raw.githubusercontent.com/ginchao/VNP1XPER/main/FirstSea'))()
 else
-function e(a)
-if find then
-game.StarterGui:SetCore("SendNotification", { Title = "Test Hub", Text = "".." (There is ⭐ in the Server) Excute Hub Again If You Want To Use The Premium Version ",  Icon = "rbxassetid://6842416695", Duration = 11  }) 
-end
-end
-e()
-game.Players.PlayerAdded:Connect(function()
-e()
-end) loadstring(game:HttpGet('https://raw.githubusercontent.com/ginchao/VNPxFree/main/First%20Sea'))() 
+print(":(") loadstring(game:HttpGet('https://raw.githubusercontent.com/ginchao/VNPxFree/main/First%20Sea'))() 
 end
 end
 game:GetService("StarterGui"):SetCore("SendNotification",{Title = "TestHub", Text = "Hãy LoadMap Nếu Không Muốn Có Lỗi", Icon = "https://www.roblox.com/headshot-thumbnail/image?userId="..game.Players.LocalPlayer.UserId.."&width=100&height=100&format=png",Duration = 20,Callback = Func, Button1 = "Load Map", Button2 = " Bật Hub Ngay" 
