@@ -1,4 +1,4 @@
-wait(3)
+
 local find = loadstring(game:HttpGet("https://raw.githubusercontent.com/ginchao/Function-FindFirstChild-Plr/main/Find"))()
 
 local Func = Instance.new("BindableFunction")
