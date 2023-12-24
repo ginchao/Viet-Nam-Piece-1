@@ -1,5 +1,5 @@
 
-local find = loadstring(game:HttpGet("https://raw.githubusercontent.com/ginchao/Function-FindFirstChild-Plr/main/Find"))()
+local free = loadstring(game:HttpGet("https://raw.githubusercontent.com/ginchao/Function-FindFirstChild-Plr/main/Free"))()
 
 local Func = Instance.new("BindableFunction")
 function Func.OnInvoke(v)
@@ -28,7 +28,7 @@ load:Destroy()
 else
 end
 print ("TestHub!")
-if find then
+if free then
 print("⭐")
 loadstring(game:HttpGet('https://raw.githubusercontent.com/ginchao/VNP1XPER/main/FirstSea'))()
 else
